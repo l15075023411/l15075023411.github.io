@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感恩母亲节 - Happy Mother's Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="heart-icon">❤</span>
+                <span>母亲节</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">首页</a></li>
+                <li><a href="#about-love" class="nav-link">关于母爱</a></li>
+                <li><a href="#memories" class="nav-link">温暖瞬间</a></li>
+                <li><a href="#wishes" class="nav-link">祝福留言</a></li>
+                <li><a href="#countdown" class="nav-link">倒计时</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Happy Mother's Day</h1>
+            <p class="hero-subtitle">全世界都在催我长大，你却心疼我的小翅膀</p>
+            <button class="hero-btn" id="scrollBtn">给妈妈的祝福</button>
+        </div>
+        <!-- 替换为母亲节主题图片，如：温馨的母女合照、鲜花等 -->
+        <div class="hero-image">
+            <img src="https://picsum.photos/1920/1080" alt="母亲节主题图片" />
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- 关于母爱板块 -->
+    <section id="about-love" class="about-love">
+        <div class="container">
+            <h2 class="section-title">关于母爱</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">💪</div>
+                    <p class="card-text">她不是超人，却为我变成了万能</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌙</div>
+                    <p class="card-text">每一个夜晚，都是她守护着我的梦</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🍚</div>
+                    <p class="card-text">饭菜的香气，是家的味道</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎁</div>
+                    <p class="card-text">她的爱，藏在每一个细节里</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 时光回忆板块 -->
+    <section id="memories" class="memories">
+        <div class="container">
+            <h2 class="section-title">那些温暖的瞬间</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <!-- 替换为妈妈年轻时的照片 -->
+                    <img src="https://picsum.photos/300/300?random=1" alt="妈妈年轻时的照片" />
+                    <p class="gallery-caption">妈妈年轻时的样子</p>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <!-- 替换为童年与妈妈的合照 -->
+                    <img src="https://picsum.photos/300/300?random=2" alt="童年与妈妈的合照" />
+                    <p class="gallery-caption">小时候和妈妈</p>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <!-- 替换为家庭旅行照片 -->
+                    <img src="https://picsum.photos/300/300?random=3" alt="家庭旅行照片" />
+                    <p class="gallery-caption">一起旅行的时光</p>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <!-- 替换为妈妈的生日照片 -->
+                    <img src="https://picsum.photos/300/300?random=4" alt="妈妈的生日照片" />
+                    <p class="gallery-caption">妈妈的生日</p>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <!-- 替换为母亲节礼物照片 -->
+                    <img src="https://picsum.photos/300/300?random=5" alt="母亲节礼物照片" />
+                    <p class="gallery-caption">去年的母亲节</p>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <!-- 替换为最新的全家福 -->
+                    <img src="https://picsum.photos/300/300?random=6" alt="最新的全家福" />
+                    <p class="gallery-caption">温馨的全家福</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 灯箱效果 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+        <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+        <img src="" alt="" class="lightbox-image" id="lightboxImage" />
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <!-- 祝福留言板 -->
+    <section id="wishes" class="wishes">
+        <div class="container">
+            <h2 class="section-title">写下对妈妈的祝福</h2>
+            <form class="wish-form" id="wishForm">
+                <div class="form-group">
+                    <label for="name">您的姓名</label>
+                    <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">祝福内容</label>
+                    <textarea id="message" name="message" placeholder="写下您想对妈妈说的话..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">提交祝福</button>
+            </form>
+            
+            <!-- 成功提示 -->
+            <div class="success-message" id="successMessage">
+                <span class="success-icon">✓</span>
+                <p>祝福提交成功！</p>
+            </div>
+
+            <div class="wish-list" id="wishList">
+                <h3 class="wish-list-title">大家的祝福</h3>
+                <div class="wish-items" id="wishItems"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 倒计时板块 -->
+    <section id="countdown" class="countdown">
+        <div class="container">
+            <h2 class="section-title">距离下一个母亲节还有</h2>
+            <div class="countdown-timer">
+                <div class="timer-item">
+                    <span class="timer-number" id="days">00</span>
+                    <span class="timer-label">天</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-number" id="hours">00</span>
+                    <span class="timer-label">时</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-number" id="minutes">00</span>
+                    <span class="timer-label">分</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-number" id="seconds">00</span>
+                    <span class="timer-label">秒</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">妈妈，我爱你！</p>
+            <div class="social-icons">
+                <!-- 社交媒体图标占位符 -->
+                <a href="#" class="social-icon" aria-label="微信">💬</a>
+                <a href="#" class="social-icon" aria-label="微博">📱</a>
+                <a href="#" class="social-icon" aria-label="分享">🔗</a>
+            </div>
+            <p class="footer-copyright">© 2024 母亲节 | Made with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- 飘落花瓣动画 -->
+    <div class="petals-container" id="petalsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
